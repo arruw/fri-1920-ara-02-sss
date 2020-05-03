@@ -14,4 +14,4 @@ install:
 	)
 
 test:
-	$(VENV)/python -m unittest discover
+	$(VENV)/python -m unittest discover -vfb

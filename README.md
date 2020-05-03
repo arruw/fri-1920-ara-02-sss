@@ -1,1 +1,1 @@
-# Sub-set sum problem
+# Approximation and randomized algorithms - Assignment 02 - Subset Sum 

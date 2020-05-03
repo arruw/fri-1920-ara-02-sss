@@ -1,8 +1,8 @@
 import unittest
 from src.utils.io import readInput
-from src.dyn import dyn as solve
+from src.exh import exh as solve
 
-class TestDyn(unittest.TestCase):
+class TestExh(unittest.TestCase):
 
   def test_ss1(self):
     A, k = readInput("input/ss1.txt")
