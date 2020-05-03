@@ -9,25 +9,25 @@ class TestExh(unittest.TestCase):
     sss = solve(A, k)
     self.assertEqual(k, sss)
 
-  # def test_ss2(self):
-  #   A, k = readInput("input/ss2.txt")
-  #   sss = solve(A, k)
-  #   self.assertEqual(k, sss)
+  def test_ss2(self):
+    A, k = readInput("input/ss2.txt")
+    sss = solve(A, k)
+    self.assertEqual(k, sss)
 
-  # def test_ss3(self):
-  #   A, k = readInput("input/ss3.txt")
-  #   sss = solve(A, k)
-  #   self.assertEqual(k, sss)
+  def test_ss3(self):
+    A, k = readInput("input/ss3.txt")
+    sss = solve(A, k)
+    self.assertEqual(k, sss)
 
-  # def test_ss4(self):
-  #   A, k = readInput("input/ss4.txt")
-  #   sss = solve(A, k)
-  #   self.assertEqual(k, sss)
+  def test_ss4(self):
+    A, k = readInput("input/ss4.txt")
+    sss = solve(A, k)
+    self.assertEqual(k, sss)
 
-  # def test_ss5(self):
-  #   A, k = readInput("input/ss5.txt")
-  #   sss = solve(A, k)
-  #   self.assertEqual(k, sss)
+  def test_ss5(self):
+    A, k = readInput("input/ss5.txt")
+    sss = solve(A, k)
+    self.assertEqual(k, sss)
 
 if __name__ == '__main__':
   unittest.main()
