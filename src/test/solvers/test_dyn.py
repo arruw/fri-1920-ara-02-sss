@@ -1,6 +1,6 @@
 import unittest
 from src.utils.io import readInput
-from src.dyn import dyn as solve
+from src.solvers.dyn import dyn as solve
 
 class TestDyn(unittest.TestCase):
 

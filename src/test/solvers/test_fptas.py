@@ -1,6 +1,6 @@
 import unittest
 from src.utils.io import readInput
-from src.fptas import fptas as solve
+from src.solvers.fptas import fptas as solve
 
 class TestFptas(unittest.TestCase):
 
