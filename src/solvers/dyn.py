@@ -1,6 +1,5 @@
 from typing import List
-from time import time
-from src.utils.io import readInput
+
 
 def dyn(A: List[int], k: int) -> int:
   A = sorted(A)
@@ -18,15 +17,3 @@ def dyn(A: List[int], k: int) -> int:
     i += 1
 
   return DP[(i+1)%2][k]
-
-
-def main(filePath: str):
-  A, k = readInput(filePath)
-  start = time()
-  sss = dyn(A, k)
-  stop = time()
-  print(f'{filePath} {stop-start:.2f}s {sss}')
-
-
-if __name__ == "__main__":
-  main("input/ss1.txt")

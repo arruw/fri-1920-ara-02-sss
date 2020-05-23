@@ -1,10 +1,9 @@
 from typing import List, Tuple, Set
-from time import time
 from functools import reduce
-from src.utils.io import readInput
 
 
 def fptas(A: List[int], k: int, eps: float) -> int:
+  A = sorted(A, reverse=True)
   delta = eps/(2*len(A))
 
   def trim(agg: Tuple[Set[int], float], a: int) -> Tuple[Set[int], float]:
@@ -20,15 +19,3 @@ def fptas(A: List[int], k: int, eps: float) -> int:
     L = set(sorted(filter(lambda x: x <= k, L)))
     L, _ = reduce(trim, L, ({0}, 0))
   return max(L)
-
-
-def main(filePath: str):
-  A, k = readInput(filePath)
-  start = time()
-  sss = fptas(A, k, 0.2)
-  stop = time()
-  print(f'{filePath} {stop-start:.2f}s {sss}')
-
-
-if __name__ == "__main__":
-  main("input/ss1.txt")

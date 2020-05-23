@@ -10,9 +10,9 @@
     "**/.settings": true,
     "**/.factorypath": true,
     "**/__pycache__": true,
-    "**/__init__.py": true,
+    "**/__init__.py": false,
     ".env": true
   },
   "explorerExclude.backup": null,
-  "python.pythonPath": "/home/aruind/Projects/fri/ara/fri-1920-ara-02-sss/.env/bin/python3"
+  "python.pythonPath": "/home/aruind/Projects/fri-1920-ara-02-sss/.env/bin/python3"
 }

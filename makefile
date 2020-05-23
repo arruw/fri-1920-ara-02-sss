@@ -15,3 +15,6 @@ install:
 
 test:
 	$(VENV)/python -m unittest discover -v
+
+clean:
+	git clean -Xdi

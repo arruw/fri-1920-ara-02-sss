@@ -150,13 +150,29 @@ In this case optimal result is $1000000$ but the algorithm would return $500001$
 
 \section{FPTAS}
 
-This is $\epsilon$-approximation. Its execution time is greatly effected by the parameter $\epsilon$. We have compared how the $\epsilon$ parameter effect the execution time of this algorithm. We have generated random inputs using code listed in the Listing 1. We observed (Figure \ref{img:eval-fptas}) that with smaller values of $\epsilon$ this algorithm performs slower and has higher standard deviation. 
+First, we compared how the $\epsilon$ parameter effect the execution time of this algorithm on sorted lists. For this evaluation we have generated random inputs using code listed in the Listing 1 and then sort the elements in ascending and descending order. We observed (Figure \ref{img:eval-fptas-asc} and Figure \ref{img:eval-fptas-desc}) that on list sorted in descending order algorithm performs quicker and have much more stable execution time.
 
 \begin{figure}[H]
-  \includegraphics[width=.8\textwidth]{output/eval-fptas}
+  \includegraphics[width=.8\textwidth]{output/eval-fptas-asc}
+  \centering
+  \caption{Elements are sorted in ascending order. Execution time compared to the parameter $\epsilon$}
+  \label{img:eval-fptas-asc}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=.8\textwidth]{output/eval-fptas-desc}
+  \centering
+  \caption{Elements are sorted in descending order. Execution time compared to the parameter $\epsilon$}
+  \label{img:eval-fptas-desc}
+\end{figure}
+
+Second, we upgrade our FPTAS implementation and first sorted elements in descending order. Then we generated exponential inputs using code listed in the Listing 2. From the Figure \ref{img:eval-fptas-hard} we can observe that FPTAS algorithm on the exponential generated inputs runs nearly 10 times slower on the random generated inputs.
+
+\begin{figure}[H]
+  \includegraphics[width=.8\textwidth]{output/eval-fptas-hard}
   \centering
   \caption{Execution time compared to the parameter $\epsilon$}
-  \label{img:eval-fptas}
+  \label{img:eval-fptas-hard}
 \end{figure}
 
 \newpage
@@ -166,5 +182,12 @@ This is $\epsilon$-approximation. Its execution time is greatly effected by the 
   firstline=10,
   lastline=16
 ]{src/eval-fptas.py}
+
+\lstinputlisting[
+  language=Python,
+  caption=Exponential problem generator,
+  firstline=10,
+  lastline=13
+]{src/eval-fptas-hard.py}
 
 \end{document}
